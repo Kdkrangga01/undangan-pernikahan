@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  {/* Pure White Crisp Square Background */}
+  <rect width="100" height="100" rx="16" fill="#FFFFFF"/>
+  
+  {/* Bigger, Bolder Undangan Labs Pillar 1 */}
+  <path
+    d="M12 14 C12 2 36 2 36 14 L36 86 C36 98 12 98 12 86 Z"
+    fill="#0A194E"
+  />
+  
+  {/* Bigger, Bolder Undangan Labs Pillar 2 */}
+  <path
+    d="M48 14 C48 2 72 2 72 14 L72 86 C72 98 48 98 48 86 Z"
+    fill="#0A194E"
+  />
+
+  {/* Bigger, Bolder Teardrop Dot . */}
+  <path
+    d="M82 76 C82 66 98 66 98 76 C98 88 82 94 82 98 L98 98 Z"
+    fill="#0A194E"
+  />
+</svg>

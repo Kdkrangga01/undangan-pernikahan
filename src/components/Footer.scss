@@ -1,0 +1,193 @@
+// ──────────────────────────────────────────────
+// Footer SCSS — Full Bleed HD Photo Banner & Seamless Undangan Labs Vector Logo
+// ──────────────────────────────────────────────
+
+.footer-section {
+  position: relative;
+  background-color: #181513; // Dark elegant Balinese footer
+}
+
+.footer-hero {
+  position: relative;
+  width: 100%;
+  height: clamp(440px, 68vw, 640px);
+  overflow: hidden;
+  background-color: #181513;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    image-rendering: -webkit-optimize-contrast; // Crystal clear sharp HD photo!
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    // Dark vignette top and bottom so HD photo stays vivid & white title pops
+    background: linear-gradient(
+      180deg,
+      rgba(15, 12, 10, 0.55) 0%,
+      rgba(15, 12, 10, 0.15) 45%,
+      rgba(15, 12, 10, 0.75) 100%
+    );
+  }
+
+  &__content {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 90%;
+    max-width: 600px;
+  }
+
+  &__emblem {
+    margin-bottom: 0.8rem;
+
+    svg {
+      filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.6));
+    }
+  }
+
+  &__names {
+    font-size: clamp(3.5rem, 9.5vw, 6rem);
+    line-height: 1;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  }
+
+  &__wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 6;
+
+    svg {
+      width: 100%;
+      height: clamp(45px, 9vw, 90px);
+    }
+  }
+}
+
+.footer-body {
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+  background-color: #181513; // Dark elegant footer matching vendor section!
+  color: #FFFFFF;
+
+  &__tag {
+    font-size: var(--fs-caption);
+    letter-spacing: 0.35em;
+    margin-bottom: 0.4rem;
+  }
+
+  &__message {
+    max-width: 580px;
+    margin: 0 auto 1.5rem;
+    font-size: 0.98rem;
+    line-height: 1.85;
+    opacity: 0.9;
+  }
+
+  &__family {
+    font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+    font-weight: 600;
+    margin-bottom: 2.2rem;
+  }
+
+  &__back-top {
+    margin: 0 auto 3rem;
+  }
+
+  // Vendor Logo Section ("Undangan Labs") — NO WHITE BOX, NO CUTOFF, Crisp Vector HD!
+  .footer-vendor {
+    margin: 3.5rem auto 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__ornament {
+      margin-bottom: 0.5rem;
+
+      svg {
+        filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.4));
+      }
+    }
+
+    &__tagline {
+      font-size: 0.82rem;
+      color: var(--color-gold-bright);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+      opacity: 0.95;
+    }
+
+    &__ig-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-top: 1rem;
+      padding: 0.5rem 1.25rem;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 50px;
+      color: #D4AF37;
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      transition: all 0.35s var(--ease-smooth);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+
+      svg {
+        stroke: #D4AF37;
+        transition: transform 0.35s var(--ease-smooth);
+      }
+
+      &:hover {
+        background: #D4AF37;
+        color: #181513;
+        border-color: #D4AF37;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+
+        svg {
+          stroke: #181513;
+          transform: scale(1.12);
+        }
+      }
+    }
+  }
+
+  .undangan-labs-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.2rem 0;
+    width: 100%;
+
+    &__svg {
+      width: clamp(230px, 52vw, 360px);
+      height: auto;
+      overflow: visible;
+      filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.6));
+    }
+  }
+
+  &__copyright {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    p {
+      font-size: 0.78rem;
+      margin: 0;
+    }
+  }
+}

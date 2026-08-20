@@ -1,0 +1,113 @@
+// ──────────────────────────────────────────────
+// CoupleProfile SCSS — Clean Bright Aesthetic & Borderless Addresses
+// ──────────────────────────────────────────────
+
+.couple-section {
+  &__tag {
+    font-size: var(--fs-caption);
+    margin-bottom: 0.3rem;
+  }
+
+  &__title {
+    font-size: var(--fs-section-title);
+    font-weight: 600;
+  }
+}
+
+.couple-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.2rem);
+
+  &__img-wrapper {
+    width: clamp(180px, 45vw, 210px);
+    height: clamp(288px, 72vw, 336px);
+    margin-bottom: 1.5rem;
+    border-radius: 130px 130px 12px 12px; // Balinese portrait arch window
+    border: 2px solid var(--color-gold-primary);
+    padding: 5px;
+    background: var(--color-bg-card);
+    box-shadow: 0 10px 25px rgba(44, 40, 37, 0.08);
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 125px 125px 8px 8px;
+    image-rendering: -webkit-optimize-contrast; // Sharp HD image rendering
+    transition: transform 0.8s var(--ease-smooth);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__name {
+    font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.9rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(197, 168, 128, 0.4);
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__line {
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-gold-primary), transparent);
+    margin: 1.2rem auto;
+  }
+
+  &__order {
+    font-size: var(--fs-caption);
+    margin-bottom: 0.4rem;
+  }
+
+  &__parents {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+
+  // Clean Borderless Address (Zero Box Card!)
+  &__address {
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    gap: 0.45rem;
+    max-width: 320px;
+    padding: 0.4rem 0 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    span {
+      text-align: center;
+    }
+  }
+
+  &__address-icon {
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+}

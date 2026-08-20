@@ -1,0 +1,133 @@
+// ──────────────────────────────────────────────
+// Music Toggle SCSS — Aesthetic Vinyl Disc & Equalizer Icon
+// ──────────────────────────────────────────────
+
+.music-toggle-btn {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  z-index: var(--z-floating);
+  width: 58px;
+  height: 58px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, #2C2825 0%, #181513 100%);
+    border: 2px solid #D4AF37;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 300ms var(--ease-smooth);
+  }
+
+  &__disc {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.is-spinning {
+      animation: spinSlow 8s linear infinite;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(212, 175, 55, 0.9);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  // Equalizer Bars Animation
+  &__equalizer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3px;
+    height: 14px;
+
+    .eq-bar {
+      width: 3px;
+      background-color: #FFFFFF;
+      border-radius: 2px;
+      animation: eqBounce 1.2s ease-in-out infinite alternate;
+
+      &--1 {
+        height: 60%;
+        animation-delay: 0.1s;
+      }
+      &--2 {
+        height: 100%;
+        animation-delay: 0.3s;
+      }
+      &--3 {
+        height: 40%;
+        animation-delay: 0.5s;
+      }
+    }
+  }
+
+  // Outer Pulse Glow
+  &__glow {
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid rgba(212, 175, 55, 0.6);
+    pointer-events: none;
+    animation: pulseGlow 2.4s ease-in-out infinite;
+  }
+}
+
+// Equalizer Keyframes
+@keyframes eqBounce {
+  0% {
+    height: 30%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .music-toggle-btn {
+    bottom: 20px;
+    left: 20px;
+    width: 52px;
+    height: 52px;
+  }
+}
