@@ -9,6 +9,7 @@ import Gallery from './components/Gallery';
 import RsvpForm from './components/RsvpForm';
 import Footer from './components/Footer';
 import MusicToggle from './components/MusicToggle';
+import OwnerPanel from './components/OwnerPanel';
 import { FloatingPetals } from './components/Ornaments';
 
 const App: React.FC = () => {
@@ -62,6 +63,9 @@ const App: React.FC = () => {
           </div>
         )}
       </AnimatePresence>
+
+      {/* Owner Access & Guest Name Generator */}
+      <OwnerPanel gateOpen={gateOpen} />
     </>
   );
 };

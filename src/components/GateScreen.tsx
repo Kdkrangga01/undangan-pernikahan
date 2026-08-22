@@ -127,7 +127,15 @@ const GateScreen: React.FC<GateScreenProps> = ({ isOpen, onOpen }) => {
               <span className="gate-info__kpd font-utility">
                 • KEPADA YTH. •
               </span>
-              <h1 className="gate-info__name font-display">
+              <h1
+                className={`gate-info__name ${
+                  guestName.length > 28
+                    ? 'gate-info__name--very-long'
+                    : guestName.length > 16
+                    ? 'gate-info__name--long'
+                    : ''
+                }`}
+              >
                 {guestName}
               </h1>
 
