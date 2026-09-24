@@ -1,4 +1,4 @@
-﻿# Undangan Pernikahan Digital
+# Undangan Pernikahan Digital
 
 Aplikasi web undangan pernikahan digital interaktif berbasis Single Page Application (SPA). Dibangun menggunakan React 19, TypeScript, Sass (SCSS), Framer Motion, dan terintegrasi dengan database Supabase untuk sistem konfirmasi kehadiran (RSVP) serta ucapan doa secara real-time.
 
@@ -70,51 +70,3 @@ undangan-pernikahan/
 ├── index.html              # Template root HTML
 ├── package.json            # Daftar dependensi modul
 └── vite.config.ts          # Konfigurasi bundler Vite
-```
-
----
-
-## Panduan Instalasi Lokal
-
-### 1. Prasyarat
-- Node.js versi 18 atau lebih baru
-- npm atau pnpm
-
-### 2. Clone Repository
-```bash
-git clone https://github.com/Kdkrangga01/undangan-pernikahan.git
-cd undangan-pernikahan
-```
-
-### 3. Instalasi Dependensi
-```bash
-npm install
-```
-
-### 4. Konfigurasi Lingkungan (.env)
-Buat file `.env` di root direktori untuk mengaktifkan fitur RSVP:
-```env
-VITE_SUPABASE_URL=https://your-project.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-key-here
-```
-
-### 5. Menjalankan Server Development
-```bash
-npm run dev
-```
-Buka peramban web pada alamat `http://localhost:5173`. Untuk menguji personalisasi nama tamu, tambahkan parameter query:
-```text
-http://localhost:5173/?to=Nama+Tamu
-```
-
-### 6. Build Produksi
-```bash
-npm run build
-```
-File hasil kompilasi akan berada di folder `dist/`.
-
----
-
-## Lisensi
-
-Didistribusikan di bawah Lisensi MIT.
